@@ -15,11 +15,6 @@ export class RoutesService {
       `https://api-v3.mbta.com/routes?sort=-direction_destinations&filter%5Btype%5D=0%2C1`
     );
   }
-  getDirections(stop_id: string): Observable<RoutesModel> {
-    return this.http.get<RoutesModel>(
-      `https://api-v3.mbta.com/routes?sort=-direction_destinations&filter%5Bstop%5D=${stop_id}`
-    )
-  }
   getRoute(route_id: string): Observable<RouteModel> {
     return this.http.get<RouteModel>(
       `https://api-v3.mbta.com/routes/${route_id}`

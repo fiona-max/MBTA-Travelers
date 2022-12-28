@@ -15,6 +15,7 @@ export class StopsComponent {
   stopsObject! : Stops
   direction_names: string[] = []
   route!: RouteModel
+  stop_Id : string = ""
 
   constructor(private activatedRoute: ActivatedRoute, private stopsService: StopsService, private routesService: RoutesService) {
   }
@@ -43,5 +44,8 @@ export class StopsComponent {
         console.log(this.direction_names)
       }
     )
+  }
+  getStop_id(id: string){
+    this.stop_Id = id
   }
 }

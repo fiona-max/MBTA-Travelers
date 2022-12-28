@@ -9,7 +9,8 @@
   <ul class="list-group" *ngFor="let stop of stopsObject.data">
     <li class="list-group-item m-3" aria-current="true">
       <div class="container">
-        <a href="" class="text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <a href="" class="text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#exampleModal"
+           (click)="getStop_id(stop.id)">
           <div class="d-flex flex-row gap-5">
             <div>
               <small>Name</small>
@@ -37,8 +38,14 @@
       </div>
       <div class="modal-body">
         <h3 class="text-center">Direction Names</h3>
-        <p class="text-center" *ngFor="let direction of direction_names">
-          {{direction}}
+        <p class="text-center">
+          <a class="text-decoration-none" href="" routerLink="/predictions/{{stop_Id}}/{{route_ID}}/0">
+            {{direction_names[0]}}
+          </a>
+          <br/>
+          <a class="text-decoration-none" href="" routerLink="/predictions/{{stop_Id}}/{{route_ID}}/1">
+            {{direction_names[1]}}
+          </a>
         </p>
       </div>
       <div class="modal-footer">
