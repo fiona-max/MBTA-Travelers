@@ -1,7 +1,8 @@
-<div class="header text-center bg-success text-white" style="padding: 12rem">
-  <h2>Welcome To MBTA</h2>
-  <h5 class="modal-title" >{{route.data.attributes.long_name}} Route</h5>
-</div>
+<app-intro></app-intro>
+
+<h5 class="modal-title bg-success text-center text-sm-center text-white mb-2" >{{route.data.attributes.long_name}} Route
+</h5>
+
 
 <h5 class="text-center mt-3">Choose a stop from the list below</h5>
 
@@ -39,18 +40,14 @@
       <div class="modal-body">
         <h3 class="text-center">Direction Names</h3>
         <p class="text-center">
-          <a class="text-decoration-none" href="" routerLink="/predictions/{{stop_Id}}/{{route_ID}}/0">
+          <a class="text-decoration-none" data-bs-dismiss="modal" href="" routerLink="/predictions/{{stop_Id}}/{{route_ID}}/0">
             {{direction_names[0]}}
           </a>
           <br/>
-          <a class="text-decoration-none" href="" routerLink="/predictions/{{stop_Id}}/{{route_ID}}/1">
+          <a class="text-decoration-none" data-bs-dismiss="modal" href="" routerLink="/predictions/{{stop_Id}}/{{route_ID}}/1">
             {{direction_names[1]}}
           </a>
         </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

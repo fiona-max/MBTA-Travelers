@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import {RoutesService} from "../../services/routes/routes.service";
 import {RoutesModel} from "../../model/routes";
+import {RoutesService} from "../../services/routes/routes.service";
 
 @Component({
-  selector: 'app-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.css']
+  selector: 'app-routes',
+  templateUrl: './routes.component.html',
+  styleUrls: ['./routes.component.css']
 })
-export class IntroComponent {
+export class RoutesComponent {
   routesArray!: RoutesModel;
 
 

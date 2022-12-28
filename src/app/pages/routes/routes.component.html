@@ -1,17 +1,16 @@
-<div class="header text-center bg-success text-white" style="padding: 12rem">
-  <h2>Welcome To MBTA</h2>
-</div>
+<app-intro></app-intro>
 
 <h5 class="text-center mt-3">Choose a route from the list below</h5>
 
 <div class="d-flex justify-content-center pt-4">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+      <button class="nav-link disabled" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
               type="button" role="tab" aria-controls="pills-home" aria-selected="true"> Light Rail trains</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> Heavy Rail trains</button>
+      <button class="nav-link disabled" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+              type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> Heavy Rail trains</button>
     </li>
   </ul>
 </div>
@@ -19,8 +18,8 @@
 <div class="container">
   <ul class="list-group" *ngFor="let route of routesArray.data">
     <li class="list-group-item m-3" aria-current="true">
-        <div class="container">
-          <a href="" class="text-decoration-none text-black"  routerLink="/stops/{{route.id}}">
+      <div class="container">
+        <a href="" class="text-decoration-none text-black"  routerLink="/stops/{{route.id}}">
           <div class="d-flex flex-row gap-5">
             <div>
               <small>Name</small>
@@ -35,8 +34,8 @@
               <div>{{route.attributes.fare_class}}</div>
             </div>
           </div>
-          </a>
-        </div>
+        </a>
+      </div>
     </li>
   </ul>
 </div>
